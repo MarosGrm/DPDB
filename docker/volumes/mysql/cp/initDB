@@ -1,0 +1,7 @@
+LOAD DATA LOCAL INFILE  
+'/home/grman/docker/volumes/mysql/cp/data100.csv'
+INTO TABLE transaction  
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(destination_ip_address,destination_ip_address,flags,flow_pair_kind,net_flow_duration,net_flow_start,packets,protocol,source_ip_address,source_port,transferred,tos);

@@ -1,0 +1,15 @@
+CREATE TABLE transaction
+(
+destination_ip_address NUMERIC(15) NOT NULL,
+destination_port NUMERIC(5) NOT NULL,
+flags VARCHAR(25) NOT NULL,
+flow_pair_kind VARCHAR(6) NOT NULL,
+net_flow_duration FLOAT(53) NOT NULL,
+net_flow_start TIMESTAMP NOT NULL,
+packets INTEGER NOT NULL,
+protocol SMALLINT NOT NULL,
+source_ip_address NUMERIC(15) NOT NULL,
+source_port NUMERIC(5) NOT NULL,
+transferred INTEGER NOT NULL,
+tos SMALLINT NOT NULL
+)
