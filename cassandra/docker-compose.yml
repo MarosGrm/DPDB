@@ -1,0 +1,9 @@
+cassandra:
+  image: bitnami/cassandra:latest
+  environment:
+    - CASSANDRA_TRANSPORT_PORT_NUMBER=7000
+  container_name: cassandra
+  ports:
+    - 7000:7000
+#  volumes:
+#     - ./data:/var/lib/mysql
