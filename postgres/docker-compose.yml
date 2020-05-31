@@ -8,5 +8,5 @@ postgres:
     - 5431:5432
   volumes:
 #     - /home/grman/docker/volumes/postgres:/docker-entrypoint-initdb.d
-     - /home/grman/docker/volumes/postgres/data:/var/lib/postgresql/data
-     - /home/grman/docker/volumes/postgres/cp:/home/grman/docker/volumes/postgres/cp
+     - ./data:/var/lib/postgresql/data
+#     - /home/grman/docker/volumes/postgres/cp:/home/grman/docker/volumes/postgres/cp

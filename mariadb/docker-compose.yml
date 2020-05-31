@@ -8,5 +8,5 @@ mariadb:
   ports:
     - 3307:3306
   volumes:
-     - /home/grman/docker/volumes/mariadb/data:/var/lib/mysql
-     - /home/grman/docker/volumes/mariadb/cp:/home/grman/docker/volumes/postmariadbgres/cp
+     - ./data:/var/lib/mysql
+       #     - /home/grman/docker/volumes/mariadb/cp:/home/grman/docker/volumes/postmariadbgres/cp
