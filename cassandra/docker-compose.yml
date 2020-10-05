@@ -7,5 +7,3 @@ cassandra:
   container_name: cassandra
   ports:
     - 9042:9042
-  volumes:
-    - ./cassandra:/var/lib/cassandra

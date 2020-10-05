@@ -7,6 +7,3 @@ mariadb:
   container_name: mariadb
   ports:
     - 3307:3306
-  volumes:
-     - ./data:/var/lib/mysql
-       #     - /home/grman/docker/volumes/mariadb/cp:/home/grman/docker/volumes/postmariadbgres/cp
