@@ -1,9 +1,11 @@
 cassandra:
   image: cassandra:latest
-  #  environment:
-  #    - CASSANDRA_USER=cassandra
-  # - CASSANDRA_PASSWORD=password     
+#  environment:
+#    - CASSANDRA_USER=cassandra
+#    - CASSANDRA_PASSWORD=password     
 #    - CASSANDRA_TRANSPORT_PORT_NUMBER=7000
   container_name: cassandra
   ports:
     - 9042:9042
+  volumes:
+     - ./data:/data
