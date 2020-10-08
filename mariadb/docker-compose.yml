@@ -1,11 +1,12 @@
 mariadb:
   image: mariadb:latest
   environment:
-    - MYSQL_ROOT_PASSWORD=password
-    - MYSQL_USER=user
-    - MYSQL_PASSWORD=password
+    - MYSQL_ROOT_PASSWORD=mariadb
+    - MYSQL_USER=mariadb
+    - MYSQL_PASSWORD=mariadb
   container_name: mariadb
   ports:
     - 3307:3306
   volumes:
+     - ./init.sql:/docker-entrypoint-initdb.d/init.sql
      - ./data:/data
