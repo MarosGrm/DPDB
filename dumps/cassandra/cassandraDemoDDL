@@ -1,7 +1,7 @@
 CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
 
-
-
+cqlsh -u 'cassandra' -p 'cassandra' -e "CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_facto
+r' : 1 };"
 create table transaction
 (
 	destination_ip_address decimal(15) not null,
