@@ -1,0 +1,37 @@
+CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+
+
+
+create table transaction
+(
+	destination_ip_address decimal(15) not null,
+	destination_port decimal(5) not null,
+	flags varchar(25) not null,
+	flow_pair_kind varchar(6) not null,
+	net_flow_duration float(53,0) not null,
+	net_flow_start timestamp not null,
+	packets int not null,
+	protocol smallint not null,
+	source_ip_address decimal(15) not null,
+	source_port decimal(5) not null,
+	transferred int not null,
+	tos smallint not null,
+);
+
+
+create table transaction
+(
+	destination_ip_address decimal,
+	destination_port decimal,
+	flags varchar,
+	flow_pair_kind varchar,
+	net_flow_duration float,
+	net_flow_start timestamp,
+	packets int,
+	protocol smallint,
+	source_ip_address decimal,
+	source_port decimal,
+	transferred int,
+	tos smallint,
+);
+

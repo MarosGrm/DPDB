@@ -7,5 +7,7 @@ cassandra:
   container_name: cassandra
   ports:
     - 9042:9042
+  command:
+     - bash -c "cqlsh -e CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };"
   volumes:
      - ./data:/data

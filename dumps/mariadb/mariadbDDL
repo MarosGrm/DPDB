@@ -1,0 +1,23 @@
+create table mariadb.transaction
+(
+	id bigint unsigned auto_increment,
+	destination_ip_address decimal(15) not null,
+	destination_port decimal(5) not null,
+	flags varchar(25) not null,
+	flow_pair_kind varchar(6) not null,
+	net_flow_duration float(53,0) not null,
+	net_flow_start timestamp default current_timestamp() not null on update current_timestamp(),
+	packets int not null,
+	protocol smallint not null,
+	source_ip_address decimal(15) not null,
+	source_port decimal(5) not null,
+	transferred int not null,
+	tos smallint not null,
+	constraint id
+		unique (id)
+);
+
+alter table mariadb.transaction
+	add primary key (id);
+
+
