@@ -9,8 +9,9 @@ cassandra:
     - 9042:9042
   volumes:
      - ./data:/data
-  command: /bin/bash -c "sleep 60 && cqlsh -u 'cassandra' -p 'cassandra' -e "CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1 };"
- 
+  command: /bin/bash -c 'cqlsh -u 'cassandra' -p 'cassandra' -e "CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1 };"'
+#  command: /bin/bash -c 'sleep 60 && cqlsh -u "cassandra" -p "cassandra" -e "CREATE KEYSPACE cassandraSS WITH REPLICATION = { "class":"SimpleStrategy", "replication_factor":1 };"'
+#  command: /bin/bash -c "cqlsh -u 'cassandra' -p 'cassandra' -e "CREATE KEYSPACE cassandraSS WITH REPLICATION = { 'class':'SimpleStrategy', 'replication_factor':1 };""
 
 
 
