@@ -1,14 +1,12 @@
 mysql:
-  image: mysql:latest
-  environment: 
-    - MYSQL_DATABASE=db
-    - MYSQL_USER=user
+  image: grman/mysql:latest
+  environment:
+    - MYSQL_DATABASE=benchmark
+    - MYSQL_USER=benchmark
     - MYSQL_PASSWORD=password
     - MYSQL_ROOT_PASSWORD=password
   container_name: mysql
   ports:
     - 3306:3306
   volumes:
-   - ./data:/var/lib/mysql
-     #   - /home/grman/docker/volumes/mysql/cp:/home/grman/docker/volumes/mysql/cp
-
+    - ./conf/my.cnf:/etc/mysql/my.cnf
