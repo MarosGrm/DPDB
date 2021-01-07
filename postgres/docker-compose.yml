@@ -1,12 +1,8 @@
 postgres:
-  image: postgres:latest
+  image: grman/postgres:latest
   environment:
-    - POSTGRES_USER=psqlAdmin
-    - POSTGRES_PASSWORD=psqlAdmin
+    - POSTGRES_USER=benchmark
+    - POSTGRES_PASSWORD=benchmark
   container_name: postgres
   ports:
     - 5431:5432
-  volumes:
-#     - /home/grman/docker/volumes/postgres:/docker-entrypoint-initdb.d
-     - ./data:/var/lib/postgresql/data
-#     - /home/grman/docker/volumes/postgres/cp:/home/grman/docker/volumes/postgres/cp

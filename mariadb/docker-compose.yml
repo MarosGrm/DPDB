@@ -1,5 +1,5 @@
 mariadb:
-  image: mariadb:latest
+  image: grman/mariadb:latest
   environment:
     - MYSQL_ROOT_PASSWORD=password
     - MYSQL_USER=user
@@ -8,5 +8,4 @@ mariadb:
   ports:
     - 3307:3306
   volumes:
-     - ./data:/var/lib/mysql
-       #     - /home/grman/docker/volumes/mariadb/cp:/home/grman/docker/volumes/postmariadbgres/cp
+    - ./conf/50-server.cnf:/etc/mysql/mariadb.conf.d/50-server.cnf

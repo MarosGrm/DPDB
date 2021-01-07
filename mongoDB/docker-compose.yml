@@ -1,11 +1,9 @@
 postgres:
-  image: mongo:latest
+  image: grman/mongo:latest
   environment:
-    - MOGNO_INITDB_DATABASE=mongo
-    - MOGNO_INITDB_ROOT_USERNAME=mongo
-    - MOGNO_INITDB_ROOT_PASSWORD=password
+    - MONGO_INITDB_DATABASE=mongo
+    - MONGO_INITDB_ROOT_USERNAME=mongo
+    - MONGO_INITDB_ROOT_PASSWORD=password
   container_name: mongo
   ports:
     - '27017-27019:27017-27019'
-  volumes:
-    - ./mongo-volume:/data/db
